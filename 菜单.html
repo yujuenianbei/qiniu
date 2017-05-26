@@ -1,0 +1,409 @@
+<div class="modal-dialog" >
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <h4 class="modal-title" id="myModalLabel">完善企业信息<span class="titleName"></span></h4>
+        </div>
+        <div class="modal-body" style="overflow: hidden;">
+            <div class="menu-left">
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingOne">
+                        <h4 class="panel-title">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                完善企业信息
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                        <div class="panel-body">
+                            <ul>
+                                <li><a class="btn btn-default" href="javascript:void(0);" onclick="investment()">对外投资</a></li>
+                                <li><a class="btn btn-default" href="javascript:void(0);" onclick="brandInfo()">商标信息</a></li>
+                                <li><a class="btn btn-default" href="javascript:void(0);" onclick="companyBranch()">分支机构</a></li>
+                                <li><a class="btn btn-default" href="javascript:void(0);" onclick="clearInfo()">清算信息</a></li>
+                                <li><a class="btn btn-default" href="javascript:void(0);" onclick="inAbnormalRecord()">列入经营异常名录信息</a></li>
+                                <li><a class="btn btn-default" href="javascript:void(0);" onclick="insepection()">抽查检查</a></li>
+                                <li><a class="btn btn-default" href="javascript:void(0);" onclick="knowledgeProperty()">知识产权出质信息</a></li>
+                                <li><a class="btn btn-default" href="javascript:void(0);" onclick="administrativeLicensing()">行政许可</a></li>
+                                <li><a class="btn btn-default" href="javascript:void(0);" onclick="person()">主要人员</a></li>
+                                <li><a class="btn btn-default" href="javascript:void(0);" onclick="share()">股东信息</a></li>
+                                <li><a class="btn btn-default" href="javascript:void(0);" onclick="change()">变更撤销</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="widget-body no-padding wsxx" id="sta">
+                <form class="form-horizontal">
+                    <div class="form-horizontal" id="showCompanyInfo">
+                        <fieldset>
+                            <div class="form-group col-sm-6">
+                                <label class="col-sm-3 control-label">公司名称：</label>
+                                <div class="col-sm-9">
+                                    <input class="form-control" id="name" name="name" placeholder="请输入公司名称">
+                                </div>
+
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <label class="col-sm-3 control-label">法人：</label>
+                                <div class="col-sm-9">
+                                    <input class="form-control" id="principalRealName" name="principalRealName" placeholder="请输入法人姓名">
+                                </div>
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <label class="col-sm-3 control-label">英文名：</label>
+                                <div class="col-sm-9">
+                                    <input class="form-control" id="englishName" name="englishName" placeholder="请输入法人英文名">
+                                </div>
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <label class="col-sm-3 control-label">法人手机号：</label>
+                                <div class="col-sm-9">
+                                    <input class="form-control" name="contactPhone" id="contactPhone" data-mask="999-9999-9999" data-mask-placeholder="*">
+                                </div>
+
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <label class="col-sm-3 control-label">电子邮箱：</label>
+                                <div class="col-sm-9">
+                                    <input class="form-control" type="email" id="email" name="email" placeholder="请输入邮箱">
+                                </div>
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <label class="col-sm-3 control-label">邮政编码：</label>
+                                <div class="col-sm-9">
+                                    <input class="form-control" id="postalCode" name="postalCode" placeholder="请输入邮政编码">
+                                </div>
+                            </div>
+
+                            <div class="form-group col-sm-6">
+                                <label class="col-sm-3 control-label">法人生日类型：</label>
+                                <div class="col-sm-9">
+                                    <select name="principalBirthdayCategory" id="principalBirthdayCategory" class="select2">
+                                        <option value="1" selected>阴历</option>
+                                        <option value="2">阳历</option>
+                                    </select>
+                                    {{--  <input class="form-control" id="principalBirthdayCategory" name="principalBirthdayCategory" placeholder="请输入法人类型">--}}
+                                </div>
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <label class="col-sm-3 control-label">法人生日：</label>
+                                <div class="col-sm-9">
+                                    <input class="form-control" placeholder="请输入法人生日" name="principalBirthday" id="principalBirthday" data-mask="9999-99-99" data-mask-placeholder="*">
+                                </div>
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <label class="col-sm-3 control-label">法人类型：</label>
+                                <div class="col-sm-9">
+                                    <select name="principalCategory" id="principalCategory" class="select2">
+                                        <option value="1" selected>企业法人</option>
+                                        <option value="2">自然人法人</option>
+                                    </select>
+                                    {{--  <input class="form-control" id="principalCategory" name="principalCategory" placeholder="请输入法人类型">--}}
+                                </div>
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <label class="col-sm-3 control-label">法人身份证：</label>
+                                <div class="col-sm-9">
+                                    <input class="form-control" placeholder="请输入身份证号码" name="principalIdentifyCardNumber" id="principalIdentifyCardNumber" data-mask="999-999-9999-99-99-9999" data-mask-placeholder="*">
+                                </div>
+                            </div>
+
+                            <div class="form-group col-sm-6">
+                                <label class="col-sm-3 control-label">法人身份证有效期：</label>
+                                <div class="col-sm-9">
+                                    <input class="form-control" name="principalIdentifyCardValidity" id="principalIdentifyCardValidity" data-mask="9999-99-99" data-mask-placeholder="*">
+                                </div>
+                            </div>
+
+                            <div class="form-group col-sm-6">
+                                <label class="col-sm-3 control-label">企业类型：</label>
+                                <div class="col-sm-9">
+                                    <select name="category" id="category" class="select2">
+                                        <option value="1" selected>有限责任公司</option>
+                                        <option value="2">个人独资企业</option>
+                                        <option value="3">有限责任公司(台港澳法人独资)</option>
+                                        <option value="4">有限责任公司(自然人投资或控股)</option>
+                                        <option value="5">有限责任公司(自然人独资)</option>
+                                        <option value="6">股份有限公司分公司</option>
+                                        <option value="7">其他股份有限公司分公司</option>
+                                        <option value="8">其他股份有限公司</option>
+                                        <option value="9">集体经营单位</option>
+                                        <option value="10">全民所有制分支机构</option>
+                                        <option value="11">国有经营单位</option>
+                                        <option value="12">集体分支机构</option>
+                                        <option value="13">外国</option>
+                                        <option value="14">独资经营</option>
+                                        <option value="15">合伙企业</option>
+                                        <option value="16">合资经营</option>
+                                        <option value="17">经营单位</option>
+                                        <option value="18">股份合作企业经营单位</option>
+                                        <option value="19">股份制企业</option>
+                                        <option value="20">内资企业法人分支机构</option>
+                                        <option value="21">有限责任公司分公司(自然人独资)</option>
+                                        <option value="22">有限责任公司(外商投资企业法人独资)</option>
+                                        <option value="23">有限责任公司(外商投资企业合资)</option>
+                                        <option value="24">有限责任公司(自然人投资或控股的法人独资)</option>
+                                        <option value="25">有限责任公司(法人独资)</option>
+
+                                    </select>
+                                    {{--  <input class="form-control" id="category" name="category" placeholder="请输入企业类型">--}}
+                                </div>
+                            </div>
+
+                            <div class="form-group col-sm-6">
+                                <label class="col-sm-3 control-label">注册号：</label>
+                                <div class="col-sm-9">
+                                    <input class="form-control" placeholder="请输入注册号" name="registrationNumber" id="registrationNumber">
+                                </div>
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <label class="col-sm-3 control-label">注册资本：</label>
+                                <div class="col-sm-9">
+                                    <input class="form-control" placeholder="请输入注册资本" name="registrationCapital" id="registrationCapital">
+                                </div>
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <label class="col-sm-3 control-label">统一社会信用编码：</label>
+                                <div class="col-sm-9">
+                                    <input class="form-control" placeholder="统一社会信用编码"  name="unifiedSocialCreditCode" id="unifiedSocialCreditCode">
+                                </div>
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <label class="col-sm-3 control-label">组织机构代码：</label>
+                                <div class="col-sm-9">
+                                    <input class="form-control" placeholder="组织机构代码"  name="organizationCode" id="organizationCode">
+                                </div>
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <label class="col-sm-3 control-label">公司规模：</label>
+                                <div class="col-sm-9">
+                                    <select name="scale" id="scale" class="select2">
+                                        <option value="1" selected>10人以下</option>
+                                        <option value="2">10-50人</option>
+                                        <option value="3">50-100人</option>
+                                        <option value="4">100人以上</option>
+                                    </select>
+                                    {{--  <input class="form-control"  name="scale" id="scale">--}}
+                                </div>
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <label class="col-sm-3 control-label">建立日期：</label>
+                                <div class="col-sm-9">
+                                    <input class="form-control" name="establishedDate" id="establishedDate" data-mask="9999-99-99" data-mask-placeholder="*">
+                                </div>
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <label class="col-sm-3 control-label">所属行业：</label>
+                                <div class="col-sm-9">
+                                    <select name="industry" id="industry" class="select2">
+                                        <option value="1" selected>全部</option>
+                                        <option value="2">采矿业</option>
+                                        <option value="3">制造业</option>
+                                        <option value="4">电力、热力、燃气及水生产和供应业</option>
+                                        <option value="5">建筑业</option>
+                                        <option value="6">批发和零售业</option>
+                                        <option value="7">信息传输、软件和信息技术服务业</option>
+                                        <option value="8">金融业</option>
+                                        <option value="9">房地产业</option>
+                                        <option value="10">租赁和商务服务业</option>
+                                        <option value="11">科学研究和技术服务业</option>
+                                        <option value="12">水利、环境和公共设施管理业</option>
+                                        <option value="13">居民服务、修理和其他服务业</option>
+                                        <option value="14">教育</option>
+                                        <option value="15">卫生和社会工作</option>
+                                        <option value="16">国际组织</option>
+                                    </select>
+                                    {{--
+                                    <input class="form-control" name="industry" id="industry" >--}}
+                                </div>
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <label class="col-sm-3 control-label">发照日期：</label>
+                                <div class="col-sm-9">
+                                    <input class="form-control" name="issuedDate" id="issuedDate" data-mask="9999-99-99" data-mask-placeholder="*">
+                                </div>
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <label class="col-sm-3 control-label">登记机关：</label>
+                                <div class="col-sm-9">
+                                    <input class="form-control" name="registrationAuthority" placeholder="请输入登记机关"  id="registrationAuthority" >
+                                </div>
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <label class="col-sm-3 control-label">信用网址：</label>
+                                <div class="col-sm-9">
+                                    <input class="form-control"  name="creditUrl" id="creditUrl" placeholder="请输入信用网址" >
+                                </div>
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <label class="col-sm-3 control-label">核准日期：</label>
+                                <div class="col-sm-9">
+                                    <input class="form-control" name="approveDate" id="approveDate" data-mask="9999-99-99" data-mask-placeholder="*">
+                                </div>
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <label class="col-sm-3 control-label">经营期限：</label>
+                                <div class="col-sm-9">
+                                    <input class="form-control" name="businessTermFrom" id="businessTermFrom" data-mask="9999-99-99" data-mask-placeholder="*">
+                                    至
+                                    <input class="form-control" name="businessTermTo" id="businessTermTo" data-mask="9999-99-99" data-mask-placeholder="*">
+                                </div>
+                            </div>
+
+                            <div class="form-group col-sm-6">
+                                <label class="col-sm-3 control-label">经营范围：</label>
+                                <div class="col-sm-9">
+                                    <input class="form-control" name="businessScope" id="businessScope" placeholder="请输入经营范围" >-
+                                </div>
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <label class="col-sm-3 control-label">经营状态：</label>
+                                <div class="col-sm-9">
+                                    <select name="businessStatus" id="businessStatus" class="select2">
+                                        <option value="1" selected>存续</option>
+                                        <option value="2">存续(在营、开业、在册)</option>
+                                        <option value="3">登记成立</option>
+                                        <option value="4">在营（开业）企业</option>
+                                        <option value="5">在营(开业)</option>
+                                        <option value="6">开业</option>
+                                        <option value="7">在业</option>
+                                        <option value="8">吊销企业</option>
+                                        <option value="9">已吊销</option>
+                                        <option value="10">注销</option>
+                                        <option value="11">吊销</option>
+                                        <option value="12">迁出</option>
+                                        <option value="13">注销企业</option>
+                                        <option value="14">正常</option>
+                                        <option value="15">已注销</option>
+                                        <option value="16">吊销未注销3</option>
+                                        <option value="17">其他</option>
+                                        <option value="18">其他</option>
+                                        <option value="19">吊销未注销</option>
+                                        <option value="20">非正常户</option>
+                                    </select>
+                                    {{--  <input class="form-control" name="businessStatus" id="businessStatus" >--}}
+                                </div>
+                            </div>
+
+                            <div class="form-group col-sm-6">
+                                <label class="col-sm-3 control-label">企业联系人：</label>
+                                <div class="col-sm-9">
+                                    <input class="form-control" name="contactName" id="contactName" placeholder="请输入企业联系人">
+                                </div>
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <label class="col-sm-3 control-label">企业联系人职务：</label>
+                                <div class="col-sm-9">
+                                    <input class="form-control" name="contactDuties" id="contactDuties" placeholder="请输入企业联系人职务">
+                                </div>
+                            </div>
+
+                            <div class="form-group col-sm-6">
+                                <label class="col-sm-3 control-label">企业联系人职务：</label>
+                                <div class="col-sm-9">
+                                    <input class="form-control" name="contactDuties" id="contactDuties" placeholder="请输入企业联系人职务">
+                                </div>
+                            </div>
+
+
+
+
+                            <div class="form-group col-sm-6">
+                                <label class="col-sm-3 control-label">详细地址：</label>
+                                <div class="col-sm-9">
+                                    <input class="form-control" name="detailedAddress" id="detailedAddress"  placeholder="请输入详细地址">
+                                </div>
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <label class="col-sm-3 control-label">营业场所：</label>
+                                <div class="col-sm-9">
+                                    <input class="form-control" name="businessPlace" id="businessPlace" placeholder="请输入营业场所">
+                                </div>
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <label class="col-sm-3 control-label">省市区：</label>
+                                <div class="col-sm-9">
+                                    <select class="form-control" id="province" name="province" onchange='provinceChange()'>
+                                        @foreach($area as $k=>$v)
+                                        <option value="{{$v['id']}}">{{$v['name']}}</option>
+                                        @endforeach
+                                    </select>
+                                    <select class="form-control" id="city" name="city" onchange='cityChange()'>
+
+                                    </select>
+                                    <select class="form-control" id="region" name="region">
+
+                                    </select>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <div class="form-group col-sm-6">
+                                <label class="col-sm-3 control-label">企业证照：</label>
+                                <div class="col-sm-9">
+                                    <div id="up_user_photo_certificate1" class="show_img" after="企业证照" data-src="">
+                                        <img defsrc="http://localhost/home/img/idCard.jpg" src="" id="certificate1">
+                                        <i class="fa fa-times" onclick="peopleRemoveImg('up_user_photo_certificate1')" style="z-index: 2"></i>
+                                        <span></span>
+                                    </div>
+                                    <div id="up_user_photo_certificate2" after="企业证照" class="show_img" data-src="">
+                                        <img defsrc="http://localhost/home/img/idCard.jpg" src="" id="certificate2">
+                                        <i class="fa fa-times" onclick="peopleRemoveImg('up_user_photo_certificate2')" style="z-index: 2"></i>
+                                        <span></span>
+                                    </div>
+                                    <div id="up_user_photo_certificate3" after="企业证照" class="show_img" data-src="">
+                                        <img defsrc="http://localhost/home/img/idCard.jpg" src="" id="certificate3">
+                                        <i class="fa fa-times" onclick="peopleRemoveImg('up_user_photo_certificate3')" style="z-index: 2"></i>
+                                        <span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+
+
+                        <fieldset>
+                            <div class="form-group col-sm-6">
+                                <label class="col-sm-3 control-label">身份证复印件：</label>
+                                <div class="col-sm-9">
+
+                                    <div id="up_user_photo_card1" after="身份证正面" class="show_img" data-src="" >
+                                        <img defsrc="http://localhost/home/img/idCard.jpg" src="" id="cardpic1">
+                                        <i class="fa fa-times" onclick="peopleRemoveImg('up_user_photo_card1')"></i>
+                                        <span></span>
+                                    </div>
+                                    <div id="up_user_photo_card2" after="身份证背面" class="show_img" data-src="">
+                                        <img defsrc="http://localhost/home/img/idCard.jpg" src="" id="cardpic2">
+                                        <i class="fa fa-times" onclick="peopleRemoveImg('up_user_photo_card2')"></i>
+                                        <span></span>
+                                    </div>
+                                    <div id="up_user_photo_card3" after="手持身份证" class="show_img" data-src="">
+                                        <img defsrc="http://localhost/home/img/idCard.jpg" src="" id="cardpic3">
+                                        <i class="fa fa-times" onclick="peopleRemoveImg('up_user_photo_card3')"></i>
+                                        <span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                </form>
+                <input type="hidden" id="show_img" value=""/>
+            </div>
+        </div>
+        <div id="curd"></div>
+        <div class="modal-footer" id="sub">
+            <!--               <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                                <button type="button" class="btn btn-primary" onclick="saveCompany()">提交</button>-->
+        </div>
+    </div>
+</div>
+
+<script>
+    $('.panel-body li a').on('click',function(){
+        $('.panel-body li a').removeClass('active');
+        $(this).addClass('active');
+        var title = $(this).html();
+        console.log(title);
+        $('.titleName').html('-('+title+')');
+    })
+</script>

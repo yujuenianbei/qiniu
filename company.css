@@ -1,0 +1,93 @@
+@media (min-width: 1201px) {
+  .menu-left {
+    width: 19%;
+    float: left;
+  }
+  .menu-left .panel-body ul {
+    margin: 0 auto;
+    padding: 0;
+  }
+  .menu-left .panel-body ul li {
+    list-style: none;
+  }
+  .menu-left .panel-body ul li a {
+    width: 100%;
+  }
+  .menu-left .panel-body ul .active {
+    background-color: #e6e6e6;
+  }
+  .wsxx {
+    width: 80%;
+    float: right;
+  }
+  .btn_new {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    z-index: 9;
+  }
+  .panel-heading {
+    padding: 0;
+  }
+  .panel-heading a {
+    padding: 10px 15px;
+    display: block;
+  }
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+  .panel-body ul {
+    margin: 0 auto;
+    padding: 0;
+  }
+  .panel-body ul li {
+    list-style: none;
+  }
+  .panel-body ul li a {
+    width: 100%;
+  }
+  .panel-body ul .active {
+    background-color: #e6e6e6;
+  }
+  .panel-heading {
+    padding: 0;
+  }
+  .panel-heading a {
+    padding: 10px 15px;
+    display: block;
+  }
+  #curd {
+    padding: 10px;
+  }
+}
+@media (max-width: 767px) {
+  .panel-body ul {
+    margin: 0 auto;
+    padding: 0;
+  }
+  .panel-body ul li {
+    list-style: none;
+  }
+  .panel-body ul li a {
+    width: 100%;
+  }
+  .panel-body ul .active {
+    background-color: #e6e6e6;
+  }
+  .panel-heading {
+    padding: 0;
+  }
+  .panel-heading a {
+    padding: 10px 15px;
+    display: block;
+  }
+  #curd {
+    padding: 10px;
+  }
+  #curd .widget-body {
+    margin: -10px 5px;
+    padding: 5px !important;
+  }
+}
+.btn:active {
+  left: inherit;
+}
